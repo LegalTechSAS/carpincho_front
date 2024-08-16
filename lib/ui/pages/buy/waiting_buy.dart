@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-class BuyPage extends StatefulWidget {
-  const BuyPage({super.key});
+class WaitingBuyPage extends StatefulWidget {
+  const WaitingBuyPage({super.key});
 
   @override
-  State<BuyPage> createState() => _BuyPageState();
+  State<WaitingBuyPage> createState() => _WaitingBuyPageState();
 }
 
-class _BuyPageState extends State<BuyPage> {
+class _WaitingBuyPageState extends State<WaitingBuyPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,16 +38,6 @@ class _BuyPageState extends State<BuyPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
-                  child: Text(
-                    "Comprobante de deposito",
-                    style: GoogleFonts.inter(
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                        color: Color.fromRGBO(6, 66, 186, 1)),
-                  ),
-                ),
-                Padding(
                   padding: EdgeInsets.only(top: 20),
                   child: Container(
                     width: double.infinity,
@@ -65,7 +55,7 @@ class _BuyPageState extends State<BuyPage> {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset("assets/arrow.svg"),
+                          SvgPicture.asset("assets/waiting.svg"),
                           Text(
                             "Cargar",
                             textAlign: TextAlign.left,
@@ -79,12 +69,23 @@ class _BuyPageState extends State<BuyPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 30),
+                  child: Text(
+                    "Los tokens serán liberados una vez comprobada la transferencia",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.inter(
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal,
+                        color: Color.fromRGBO(6, 66, 186, 1)),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 70),
                   child: SizedBox(
                     width: 390,
                     height: 70,
                     child: ElevatedButton(
                       onPressed: () {
-                        context.pushNamed('waitingBuy');
+                        context.pushNamed('confirmedBuy');
                       },
                       child: Text("Chequear",
                           style: GoogleFonts.inter(
@@ -100,7 +101,7 @@ class _BuyPageState extends State<BuyPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 130),
+                  padding: EdgeInsets.only(top: 80),
                   child: Text(
                     "Carpincho Labs | 2024",
                     style: GoogleFonts.inter(

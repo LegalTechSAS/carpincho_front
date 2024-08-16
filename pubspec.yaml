@@ -49,6 +49,8 @@ dependencies:
   flutter_secure_storage: any
   firebase_auth: any
   image_picker: any
+  web3modal_flutter: any
+  change_app_package_name: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

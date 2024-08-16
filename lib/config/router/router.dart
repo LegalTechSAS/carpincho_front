@@ -1,10 +1,12 @@
 import 'package:carpincho_front/ui/pages/buy/buy.dart';
 import 'package:carpincho_front/ui/pages/buy/confirmed_buy.dart';
+import 'package:carpincho_front/ui/pages/buy/waiting_buy.dart';
 import 'package:carpincho_front/ui/pages/claim/claim.dart';
 import 'package:carpincho_front/ui/pages/home/home.dart';
 import 'package:carpincho_front/ui/pages/login/login.dart';
 import 'package:carpincho_front/ui/pages/register/register.dart';
 import 'package:carpincho_front/ui/pages/sell/sell.dart';
+import 'package:carpincho_front/ui/pages/test/page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -39,6 +41,11 @@ final router = GoRouter(
       name: "confirmedBuy",
       path: '/confirmedBuy',
       builder: (context, state) => ConfirmedBuyPage(),
+    ),
+    GoRoute(
+      name: "waitingBuy",
+      path: '/waitingBuy',
+      builder: (context, state) => WaitingBuyPage(),
     ),
     GoRoute(
       name: "sell",

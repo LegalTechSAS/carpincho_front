@@ -50,153 +50,169 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
-                  child: Container(
-                      width: double.infinity,
-                      height: 400.0, // Set the height
-                      decoration: BoxDecoration(
-                        color:
-                            Colors.transparent, // Transparent background color
-                        borderRadius:
-                            BorderRadius.circular(30.0), // Rounded corners
-                        border: Border.all(
-                          color: Color.fromRGBO(6, 66, 186, 1), // Border color
-                          width: 2.0, // Border width
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  padding: EdgeInsets.only(top: 100),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 15),
+                            padding: EdgeInsets.only(left: 60),
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
-                                "Renta Mensual",
+                                "Balance",
                                 textAlign: TextAlign.left,
                                 style: GoogleFonts.inter(
-                                    fontSize: 30,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.w400,
                                     color: Color.fromRGBO(6, 66, 186, 1)),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 15),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SizedBox(
-                                    width: 60.0, // Set the height
-                                    child: Image.asset(
-                                      "assets/sol.png",
-                                      fit: BoxFit.cover,
-                                    )),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15),
-                                  child: Align(
-                                    alignment: Alignment.topLeft,
-                                    child: Text(
-                                      "500 UY",
-                                      textAlign: TextAlign.left,
+                            padding: EdgeInsets.only(left: 130),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                "A redimir",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.inter(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(6, 66, 186, 1)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                                width: 170,
+                                height: 190.0, // Set the height
+                                decoration: BoxDecoration(
+                                  color: Colors
+                                      .transparent, // Transparent background color
+                                  borderRadius: BorderRadius.circular(
+                                      30.0), // Rounded corners
+                                  border: Border.all(
+                                    color: Color.fromRGBO(
+                                        6, 66, 186, 1), // Border color
+                                    width: 2.0, // Border width
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 15),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 15),
+                                            child: Align(
+                                              alignment: Alignment.topLeft,
+                                              child: Text(
+                                                "500",
+                                                textAlign: TextAlign.left,
+                                                style: GoogleFonts.inter(
+                                                    fontSize: 50,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color.fromRGBO(
+                                                        6, 66, 186, 1)),
+                                              ),
+                                            ),
+                                          ),
+                                          Row(
+                                            children: [
+                                              SizedBox(
+                                                  width: 60.0, // Set the height
+                                                  child: Image.asset(
+                                                    "assets/sol.png",
+                                                    fit: BoxFit.cover,
+                                                  )),
+                                              Padding(
+                                                padding:
+                                                    EdgeInsets.only(left: 8),
+                                                child: Align(
+                                                  alignment: Alignment.topLeft,
+                                                  child: Text(
+                                                    "UY",
+                                                    textAlign: TextAlign.left,
+                                                    style: GoogleFonts.inter(
+                                                        fontSize: 35,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: Color.fromRGBO(
+                                                            6, 66, 186, 1)),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                            Container(
+                                width: 170,
+                                height: 190.0, // Set the height
+                                decoration: BoxDecoration(
+                                  color: Colors
+                                      .transparent, // Transparent background color
+                                  borderRadius: BorderRadius.circular(
+                                      30.0), // Rounded corners
+                                  border: Border.all(
+                                    color: Color.fromRGBO(
+                                        6, 66, 186, 1), // Border color
+                                    width: 2.0, // Border width
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Image.asset(
+                                          "assets/carpincho.png",
+                                          scale: 2.5,
+                                        ),
+                                        Text(
+                                          "598",
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.inter(
+                                              fontSize: 50,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color.fromRGBO(
+                                                  6, 66, 186, 1)),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      "\$CARPI",
+                                      textAlign: TextAlign.center,
                                       style: GoogleFonts.inter(
-                                          fontSize: 30,
+                                          fontSize: 35,
                                           fontWeight: FontWeight.bold,
                                           color: Color.fromRGBO(6, 66, 186, 1)),
                                     ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                  width: 170,
-                                  height: 200.0, // Set the height
-                                  decoration: BoxDecoration(
-                                    color: Colors
-                                        .transparent, // Transparent background color
-                                    borderRadius: BorderRadius.circular(
-                                        30.0), // Rounded corners
-                                    border: Border.all(
-                                      color: Color.fromRGBO(
-                                          6, 66, 186, 1), // Border color
-                                      width: 2.0, // Border width
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        "Tokens a claimear",
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.inter(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w400,
-                                            color:
-                                                Color.fromRGBO(6, 66, 186, 1)),
-                                      ),
-                                      Text(
-                                        "225",
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.inter(
-                                            fontSize: 75,
-                                            fontWeight: FontWeight.bold,
-                                            color:
-                                                Color.fromRGBO(6, 66, 186, 1)),
-                                      ),
-                                    ],
-                                  )),
-                              Container(
-                                  width: 170,
-                                  height: 200.0, // Set the height
-                                  decoration: BoxDecoration(
-                                    color: Colors
-                                        .transparent, // Transparent background color
-                                    borderRadius: BorderRadius.circular(
-                                        30.0), // Rounded corners
-                                    border: Border.all(
-                                      color: Color.fromRGBO(
-                                          6, 66, 186, 1), // Border color
-                                      width: 2.0, // Border width
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text(
-                                            "Tokens claimeados",
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.inter(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w400,
-                                                color: Color.fromRGBO(
-                                                    6, 66, 186, 1)),
-                                          ),
-                                          Text(
-                                            "598",
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.inter(
-                                                fontSize: 75,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color.fromRGBO(
-                                                    6, 66, 186, 1)),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  )),
-                            ],
-                          )
-                        ],
-                      )),
+                                  ],
+                                )),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 30),
@@ -227,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                         height: 70,
                         child: ElevatedButton(
                           onPressed: () {
-                            context.pushNamed('buy');
+                            context.pushNamed('sell');
                           },
                           child: Text("Vender",
                               style: GoogleFonts.inter(
@@ -251,9 +267,9 @@ class _HomePageState extends State<HomePage> {
                     height: 70,
                     child: ElevatedButton(
                       onPressed: () {
-                        context.pushNamed('buy');
+                        context.pushNamed('claim');
                       },
-                      child: Text("Claim",
+                      child: Text("Redimir",
                           style: GoogleFonts.inter(
                               fontSize: 25,
                               fontWeight: FontWeight.normal,
@@ -267,7 +283,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 60),
+                  padding: EdgeInsets.only(top: 180),
                   child: Text(
                     "Carpincho Labs | 2024",
                     style: GoogleFonts.inter(
